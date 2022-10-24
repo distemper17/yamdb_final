@@ -9,21 +9,15 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.views import TokenObtainPairView
-
 from reviews.models import Category, Genre, Review, Title, User
+
 from .filters import TitleFilter
-from .permissions import (IsAdminOrReadOnly,
-                          IsAuthorAdminModerOrReadOnly,
-                          UserMePermission,
-                          UserPermission)
-from .serializers import (AuthorizationTokenSerializer,
-                          CategoriesSerializer,
-                          CommentsSerializer,
-                          GenresSerializer,
-                          JwsTokenSerializer,
-                          ReviewsSerializer,
-                          TitlesSerializer,
-                          UsersSerializer)
+from .permissions import (IsAdminOrReadOnly, IsAuthorAdminModerOrReadOnly,
+                          UserMePermission, UserPermission)
+from .serializers import (AuthorizationTokenSerializer, CategoriesSerializer,
+                          CommentsSerializer, GenresSerializer,
+                          JwsTokenSerializer, ReviewsSerializer,
+                          TitlesSerializer, UsersSerializer)
 
 
 class GetPostDeleteViewSet(mixins.CreateModelMixin,
