@@ -49,7 +49,7 @@ class Category(CategoryGenre):
         verbose_name = 'Категории'
 
     def __str__(self):
-        return self.name.truncate(15)
+        return self.name
 
 
 class Genre(CategoryGenre):
