@@ -62,6 +62,7 @@ class GetUserAPIView(APIView):
             token_code = default_token_generator.make_token(user)
             send_message(token_code, created, email)
             return Response(serializer.data, status=status.HTTP_200_OK)
+        return None
 
 
 class GetWorkingTokenAPIView(TokenObtainPairView):
@@ -82,6 +83,7 @@ class GetWorkingTokenAPIView(TokenObtainPairView):
             return Response(
                 'Невозможно получить Token',
                 status=status.HTTP_400_BAD_REQUEST)
+        return None
 
 
 class UsersViewSet(viewsets.ModelViewSet):

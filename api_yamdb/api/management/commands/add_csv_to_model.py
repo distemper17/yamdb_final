@@ -11,8 +11,7 @@ class Command(BaseCommand):
 
     def get_csv_file(self, filename):
         path = os.path.join("data", filename)
-        file_path = finders.find(path)
-        return file_path
+        return finders.find(path)
 
     def add_arguments(self, parser):
         parser.add_argument("direction", type=str, help="Имя файла")
