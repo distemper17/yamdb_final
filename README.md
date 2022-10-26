@@ -1,3 +1,6 @@
+![yamdb_workflow]
+(https://github.com/distemper17/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 ### Описание проекта:
 
 Проект разработан как инструмент сбора данных о произведениях.
