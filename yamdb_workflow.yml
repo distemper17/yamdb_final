@@ -61,7 +61,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            cd infra/
+            cd api_yamdb/infra/
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
