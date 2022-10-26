@@ -1,5 +1,6 @@
-![yamdb_workflow]
-(https://github.com/distemper17/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+![yamdb_workflow](https://github.com/distemper17/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
+Репозиторий публичный
 
 ### Описание проекта:
 
