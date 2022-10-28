@@ -43,7 +43,7 @@ class UserPermission(permissions.BasePermission):
             if request.method == 'GET' and request.user.role != 'admin':
                 return False
             if (request.method == 'GET' or 'PATCH'
-                  and request.user.role == 'admin'):
+               and request.user.role == 'admin'):
                 return True
             if request.method == 'DELETE' and request.user.is_admin:
                 return True
