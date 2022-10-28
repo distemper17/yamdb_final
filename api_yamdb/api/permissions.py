@@ -40,11 +40,11 @@ class UserPermission(permissions.BasePermission):
         if request.user.is_authenticated:
             if request.user.role == 'admin' or request.user.is_admin:
                 return True
-            elif request.method == 'GET' and request.user.role != 'admin':
+            if request.method == 'GET' and request.user.role != 'admin':
                 return False
-            elif (request.method == 'GET' or 'PATCH'
+            if (request.method == 'GET' or 'PATCH'
                   and request.user.role == 'admin'):
                 return True
-            elif request.method == 'DELETE' and request.user.is_admin:
+            if request.method == 'DELETE' and request.user.is_admin:
                 return True
         return False
