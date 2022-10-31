@@ -1,6 +1,10 @@
 import os
 from datetime import timedelta
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -22,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'drf_yasg',
     'rest_framework',
     'django_filters',
     'api',
@@ -69,7 +74,7 @@ DATABASES = {
         'NAME': os.getenv('DB_NAME', default='postgres'),
         'USER': os.getenv('POSTGRES_USER', default='postgres'),
         'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='postgres'),
-        'HOST': os.getenv('DB_HOST', default='db'),
+        'HOST': os.getenv('DB_HOST', default='localhost'),
         'PORT': os.getenv('DB_PORT', default='5432')
     }
 }
@@ -108,12 +113,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 
-STATIC_URL = '/staticfiles/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'staticfiles'),)
-STATIC_ROOT = (os.path.join(BASE_DIR, "static"))
+STATIC_URL = '/static/'
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATIC_ROOT = (os.path.join(BASE_DIR, 'static'))
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = (os.path.join(BASE_DIR, 'media/'))
+MEDIA_ROOT = (os.path.join(BASE_DIR, 'media'))
 
 # Default auto field is added since Django is complaining about it whilst migrating
 
