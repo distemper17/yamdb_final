@@ -4,7 +4,7 @@ services:
   db:
     image: postgres:13.0-alpine
     volumes:
-      - /var/lib/docker/volumes/yamdb_volume/_data/
+      - db_value:/var/lib/docker/volumes/yamdb_volume/_data/
     env_file:
       - ./.env
   web:
@@ -31,11 +31,10 @@ services:
 
       - media_value:/var/html/media/
 
-      - ./redoc.yaml:/var/html/static/redoc.yaml
-
     depends_on:
       - web
 
 volumes:
   static_value:
   media_value:
+  db_value:
