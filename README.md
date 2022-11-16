@@ -136,11 +136,10 @@ DB_PORT=5432 # порт для подключения к БД
 
 ### Команды для запуска приложения в контейнере
 
-В первую очередь, необходимо сделать образ. Для этого переходим в директорию Докерфайла и запускаем образ:
+В первую очередь, создаем контейнеры Docker Compose, перейдя в папку infra:
 ```
-docker build -t <название образа> .
+cd infra
 ```
-Далее, создаем контейнеры Docker Compose:
 ```
 docker-compose up
 ```
@@ -154,6 +153,12 @@ docker-compose exec web python manage.py createsuperuser
 ```
 docker-compose exec web python manage.py collectstatic --no-input 
 ```
+
+### Эндпоинты для проверки и развертывания
+
+127.0.0.1/redoc/ - redoc
+127.0.0.1/admin/ - админка
+127.0.0.1/api/v1/ - api
 
 ### Команды для заполнения базы данными
 
