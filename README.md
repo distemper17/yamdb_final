@@ -143,22 +143,32 @@ cd infra
 ```
 docker-compose up
 ```
-Производим миграции и добавляем статику:
+Производим миграции:
+```
+docker-compose exec web python manage.py makemigrations reviews
+```
 ```
 docker-compose exec web python manage.py migrate
 ```
+Создаем суперпользователя:
 ```
 docker-compose exec web python manage.py createsuperuser
 ```
+Добавляем статику:
 ```
 docker-compose exec web python manage.py collectstatic --no-input 
 ```
 
 ### Эндпоинты для проверки и развертывания
-
+```
 127.0.0.1/redoc/ - redoc
+```
+```
 127.0.0.1/admin/ - админка
+```
+```
 127.0.0.1/api/v1/ - api
+```
 
 ### Команды для заполнения базы данными
 
