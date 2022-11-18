@@ -63,7 +63,6 @@ jobs:
             sudo docker-compose rm -f web
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final
             sudo docker system prune -f
-            rm .env
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
             echo DB_NAME=${{ secrets.DB_NAME }} >> .env
