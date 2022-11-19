@@ -159,15 +159,15 @@ docker-compose exec web python manage.py createsuperuser
 docker-compose exec web python manage.py collectstatic --no-input 
 ```
 
-### Эндпоинты для проверки и развертывания
+### Эндпоинты для запросов
 ```
-127.0.0.1/redoc/ - redoc
-```
-```
-127.0.0.1/admin/ - админка
+84.201.155.32/redoc/ - redoc
 ```
 ```
-127.0.0.1/api/v1/ - api
+84.201.155.32/admin/ - админка
+```
+```
+84.201.155.32/api/v1/ - api
 ```
 
 ### Команды для заполнения базы данными
